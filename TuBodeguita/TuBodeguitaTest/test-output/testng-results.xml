@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="CategoriaSuite" duration-ms="80765" started-at="2017-04-30T00:15:05Z" finished-at="2017-04-30T00:16:26Z">
+    <groups>
+    </groups>
+    <test name="TAtiendoWebDriverTest" duration-ms="80765" started-at="2017-04-30T00:15:05Z" finished-at="2017-04-30T00:16:26Z">
+      <class name="pe.com.test.seleniumwd.TAtiendoWebDriverTest">
+        <test-method status="PASS" signature="inicioClase(java.lang.String, int)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="inicioClase" is-config="true" duration-ms="6094" started-at="2017-04-29T19:15:05Z" finished-at="2017-04-29T19:15:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inicioClase -->
+        <test-method status="PASS" signature="insertarUsuarios(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarUsuarios" duration-ms="7086" started-at="2017-04-29T19:15:11Z" data-provider="datosUsuarios" finished-at="2017-04-29T19:15:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Henry ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[hwong@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Cliente]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarUsuarios -->
+        <test-method status="PASS" signature="insertarUsuarios(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarUsuarios" duration-ms="5424" started-at="2017-04-29T19:15:19Z" data-provider="datosUsuarios" finished-at="2017-04-29T19:15:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luis]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[lwong@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Cliente]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarUsuarios -->
+        <test-method status="PASS" signature="insertarUsuarios(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarUsuarios" duration-ms="5336" started-at="2017-04-29T19:15:24Z" data-provider="datosUsuarios" finished-at="2017-04-29T19:15:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Maria]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Urquiza]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[murquiza@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Cliente]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarUsuarios -->
+        <test-method status="PASS" signature="insertarUsuarios(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarUsuarios" duration-ms="5251" started-at="2017-04-29T19:15:29Z" data-provider="datosUsuarios" finished-at="2017-04-29T19:15:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Luisa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[lwong@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Ya existe un Cliente con el mismo Correo]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarUsuarios -->
+        <test-method status="PASS" signature="insertarUsuarios(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarUsuarios" duration-ms="5186" started-at="2017-04-29T19:15:35Z" data-provider="datosUsuarios" finished-at="2017-04-29T19:15:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Juan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ruiz]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[lwong]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Formato de correo no valido]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarUsuarios -->
+        <test-method status="PASS" signature="insertarPedido(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarPedido" duration-ms="15238" started-at="2017-04-29T19:15:40Z" data-provider="datosPedidos" depends-on-methods="pe.com.test.seleniumwd.TAtiendoWebDriverTest.insertarUsuarios" finished-at="2017-04-29T19:15:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hwong@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[COCA COLA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Pedido con ID : ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarPedido -->
+        <test-method status="PASS" signature="insertarPedido(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarPedido" duration-ms="14724" started-at="2017-04-29T19:15:55Z" data-provider="datosPedidos" depends-on-methods="pe.com.test.seleniumwd.TAtiendoWebDriverTest.insertarUsuarios" finished-at="2017-04-29T19:16:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lwong@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[INCA COLA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Pedido con ID : ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarPedido -->
+        <test-method status="PASS" signature="insertarPedido(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="insertarPedido" duration-ms="14536" started-at="2017-04-29T19:16:10Z" data-provider="datosPedidos" depends-on-methods="pe.com.test.seleniumwd.TAtiendoWebDriverTest.insertarUsuarios" finished-at="2017-04-29T19:16:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[murquiza@jbgroup.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[PRINCESA]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Se guardo de manera correcta el Pedido con ID : ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- insertarPedido -->
+        <test-method status="PASS" signature="finClase()[pri:0, instance:pe.com.test.seleniumwd.TAtiendoWebDriverTest@cbfb61]" name="finClase" is-config="true" duration-ms="1549" started-at="2017-04-29T19:16:24Z" finished-at="2017-04-29T19:16:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finClase -->
+      </class> <!-- pe.com.test.seleniumwd.TAtiendoWebDriverTest -->
+    </test> <!-- TAtiendoWebDriverTest -->
+  </suite> <!-- CategoriaSuite -->
+</testng-results>

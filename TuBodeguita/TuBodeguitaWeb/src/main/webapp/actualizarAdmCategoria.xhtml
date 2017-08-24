@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="template.xhtml">
+    <ui:define name="body">
+        <h:form prependId="false" id="frmIndex">
+            <p:panel header="#{m['actualizarAdmCategoria.cabecera']}">
+
+                <h:panelGrid columns="2" id="panel02">
+
+                    <h:outputLabel value="#{m['actualizarAdmCategoria.codigo']}: *" />
+                    <h:inputText id="txtCodigo" label="#{m['actualizarAdmCategoria.codigo']}" value="#{categoriaController.categoriaGuardar.idCategoria}" readonly="true" required="true" size="50"/>
+
+                    <h:outputLabel value="#{m['actualizarAdmCategoria.nombre']}: *" />
+                    <h:inputText id="txtNombre" label="#{m['actualizarAdmCategoria.nombre']}" value="#{categoriaController.categoriaGuardar.nombre}" required="true" size="50"/>
+
+                    <h:outputLabel value="" /> 
+                    <h:panelGrid columns="2"> 
+                        <p:commandButton id="btnGuardar" value="#{m['template.guardar']}" action="#{categoriaController.actualizar}" update="panel02" style="width: 150px"/>    
+                        <p:commandButton id="btnVolver" value="#{m['template.volver']}" action="mntAdmCategoria" immediate="true"  style="width: 150px"/>
+                    </h:panelGrid>
+
+                </h:panelGrid>
+
+                <p:messages id="messages" showDetail="false" autoUpdate="true" />
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

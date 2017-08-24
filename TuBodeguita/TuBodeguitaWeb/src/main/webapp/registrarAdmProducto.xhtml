@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="template.xhtml">
+    <ui:define name="body">
+        <h:form prependId="false" id="frmIndex">
+            <h:inputHidden value="#{productoController.inicioMantenimiento}" />
+            <p:panel header="#{m['registrarAdmProducto.cabecera']}">
+
+                <h:panelGrid columns="2" id="panel02">
+                    <h:outputLabel value="#{m['registrarAdmProducto.nombre']}: *" />
+                    <h:inputText id="txtNombre" label="#{m['registrarAdmProducto.nombre']}" value="#{productoController.productoGuardar.nombre}" required="true" size="50"/>
+
+                   
+                    <h:outputLabel value="#{m['registrarAdmProducto.categoria']}: *" />
+                    <h:selectOneMenu id="cboCategoria" value="#{productoController.productoGuardar.idCategoria}" style="width: 385px">
+                        <f:selectItems value="#{productoController.listaItemGrupos}" />
+                    </h:selectOneMenu>
+                    
+                    <h:outputLabel value="#{m['registrarAdmProducto.precio']}: *" />
+                    <h:inputText id="txtPrecio"  required="true" label="#{m['registrarAdmProducto.precio']}" value="#{productoController.productoGuardar.precio}" style="width: 100px" />  
+
+                    <h:outputLabel value="" /> 
+                    <h:panelGrid columns="2"> 
+                        <p:commandButton id="btnGuardar" value="#{m['template.guardar']}" action="#{productoController.insertar}" update="panel02" style="width: 150px"/>    
+                        <p:commandButton id="btnVolver" value="#{m['template.volver']}" action="mntAdmProducto" immediate="true"  style="width: 150px"/>
+                    </h:panelGrid>
+                </h:panelGrid>
+
+                <p:messages id="messages" showDetail="false" autoUpdate="true" />
+
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+

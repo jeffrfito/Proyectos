@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <f:loadBundle basename="messages" var="m" />
+        <title>#{m['template.titulo']}</title>
+        <link href="img/logo.ico" rel="icon" type="image/x-icon" />
+        <h:outputStylesheet name="css/default.css" />
+    </h:head>
+    <h:body>
+        <h:form prependId="false">
+            <p:panel header="#{m['template.cabecera']}" id="panelCabecera">
+                <table width="100%">
+                    <tr>
+                        <td width="10%" align="left"><img src="img/logo.png" style="width: 95px; height: 70px" alt="Logo" /></td>
+                        <td width="90%" align="left"><h1>#{m['template.titulo']}</h1></td>
+                    </tr>
+                </table>
+            </p:panel>
+            <p:spacer height="5" />
+            <p:panel id="panelCuerpo">
+                <h:panelGrid columns="2" id="panel02" cellpadding="5" >        
+                    
+                    <h:outputLabel value="#{m['index.usuario']}: *" />
+                    <p:inputText id="txtUsuario" label="#{m['index.usuario']}" value="#{iniciarSesionController.usuarioBean.correo}" required="true" size="50"/>
+
+                    <h:outputLabel for="txtClave" value="#{m['index.clave']}: *" />
+                    <p:password id="txtClave" value="#{iniciarSesionController.usuarioBean.clave}" label="#{m['index.clave']}" required="true" size="50"/>
+
+                    <h:outputLabel value="" /> 
+                    <p:commandButton value="#{m['index.iniciarSesion']}"  action="#{iniciarSesionController.iniciarSesion()}" id="btnIniciarSesion"  />
+                </h:panelGrid>
+                <p:messages id="messages" showDetail="false" autoUpdate="true"/>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

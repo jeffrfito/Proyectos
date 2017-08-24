@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+        <f:loadBundle basename="messages" var="m" />
+        <title>#{m['template.titulo']}</title>
+        <link href="img/logo.ico" rel="icon" type="image/x-icon" />
+        <h:outputStylesheet name="css/default.css" />
+    </h:head>
+
+    <f:event listener="#{seguridadViewHandler.isAdmin}" type="preRenderView" />
+
+    <!-- Para que controle el maximo de inactividad -->
+    <p:idleMonitor onactive="sessionTimeOutDialog.show();"
+                   timeout="#{session.maxInactiveInterval * 1000}" />
+    <p:dialog header="#{m['template.cabeceraCaducada']}"
+              widgetVar="sessionTimeOutDialog" modal="true" closable="false"
+              width="400" visible="false">
+        <h:outputText value="#{m['template.mensajeCaducada']}" />
+        <input id="confirmBackToLogin" type="button"
+               value="#{m['template.botonCaducada']}"
+               onclick="window.location = '#{facesContext.externalContext.requestContextPath}/index.xhtml';" />
+    </p:dialog>
+    <!-- ================================================== -->
+
+    <p:ajaxStatus onstart="PF('statusDialog').show()"
+                  onsuccess="PF('statusDialog').hide()" />
+    <p:dialog widgetVar="statusDialog" modal="true" draggable="false"
+              closable="false" resizable="false" showHeader="false">
+        <img src="img/ajax-loader.gif" />
+    </p:dialog>
+
+    <h:body>
+
+
+        <table width="100%" cellspacing="10">
+            <tr>
+                <td colspan="2"><p:panel header="#{m['template.cabecera']}"
+                                         id="panelCabecera">
+                        <table width="100%">
+                            <tr>
+                                <td width="10%" align="left"><img src="img/logo.png" style="width: 95px; height: 70px" alt="Logo" /></td>
+                                <td width="90%">#{m['template.titulo']} <h:form
+                                        id="frmCerrarSesion">
+                                        <p:commandLink id="linkCerrarSesion"
+                                                       actionListener="#{sesionController.cerrarSesion}" ajax="false">
+                                            <h:outputText value="(#{m['template.cerrarSesion']})" />
+                                        </p:commandLink>
+                                    </h:form>
+                                </td>
+                            </tr>
+                        </table>
+                    </p:panel></td>
+            </tr>
+            <tr>
+                <td width="20%" align="left" valign="top"><h:form id="frmMenu">
+                        <p:menu style="width: 100%">
+                            <p:submenu label="Mantenimiento">
+                                <p:menuitem value="Mant. Categoria"
+                                            action="mntAdmCategoria?faces-redirect=true" immediate="true" id="linkMntCategoria"/>
+                                <p:menuitem value="Mant. Producto"
+                                            action="mntAdmProducto?faces-redirect=true" immediate="true" id="linkMntProducto" />
+                            </p:submenu>
+                        </p:menu>
+                    </h:form></td>
+                <td align="left" valign="top" width="80%"><ui:insert name="body" /></td>
+            </tr>
+        </table>
+
+
+
+
+    </h:body>
+
+
+</html>
+
